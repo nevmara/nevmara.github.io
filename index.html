@@ -3,11 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Nevmara">
-    <meta name="author" content="Nevmara">
+    
+    <!-- Temel SEO ve Meta Etiketleri -->
+    <meta name="description" content="Nevmara - Sessizliği tasarlıyoruz. Gürültüyü azaltan, dikkati koruyan araçlar. Ekranların ötesinde bir dinginlik arayışındayız.">
+    <meta name="author" content="Nevmara Software Studio">
+    <meta name="keywords" content="nevmara, yazılım, mobil uygulama, odak, sadelik, vakitler uygulaması, falling animals">
+    
+    <!-- Tarayıcı Tema Renkleri (Mobil tarayıcılar için) -->
+    <meta name="theme-color" content="#fdfaf6" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="#0a090d" media="(prefers-color-scheme: dark)">
+
+    <!-- Open Graph / Facebook / WhatsApp (Paylaşım Kartları İçin) -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://nevmara.github.io/">
+    <meta property="og:title" content="Nevmara Software Studio">
+    <meta property="og:description" content="Sadelik, karmaşıklığın nihai çözümüdür. Nevmara, gürültüyü azaltan ve dikkati koruyan araçlar üzerine düşünür.">
+    <meta property="og:image" content="https://nevmara.github.io/images/og-image.jpg"> <!-- Paylaşıldığında çıkacak resim -->
+
+    <!-- Twitter Meta Etiketleri -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://nevmara.github.io/">
+    <meta name="twitter:title" content="Nevmara Software Studio">
+    <meta name="twitter:description" content="Sadelik, karmaşıklığın nihai çözümüdür. Nevmara, gürültüyü azaltan ve dikkati koruyan araçlar üzerine düşünür.">
+    <meta name="twitter:image" content="https://nevmara.github.io/images/og-image.jpg">
+
     <title>Nevmara</title>
     
+    <!-- İkonlar -->
     <link rel="icon" type="image/svg+xml" href="logo.svg">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png"> <!-- iOS Ana Ekrana Ekleme İkonu -->
+    
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
     
@@ -100,7 +125,7 @@
                 
                 <button id="lang-toggle" class="text-[10px] font-bold uppercase tracking-widest opacity-50 hover:opacity-100 transition-opacity">EN</button>
                 
-                <button id="theme-toggle" class="opacity-50 hover:opacity-100">
+                <button id="theme-toggle" class="opacity-50 hover:opacity-100" aria-label="Toggle Theme">
                     <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
                 </button>
             </div>
@@ -148,14 +173,15 @@
                 <div class="md:col-span-4 md:row-span-2 bento-card bg-nev-surface dark:bg-nev-darkSurface rounded-5xl p-12 border border-slate-100 dark:border-white/5">
                     <div class="flex flex-col md:flex-row gap-12">
                         <div class="w-32 h-32 shrink-0 rounded-[2.5rem] bg-slate-50 dark:bg-white/5 p-2">
-                            <img src="https://play-lh.googleusercontent.com/6q8ottzIZ5khc5I-SSXMlwlalCq-1OFv8IKiLtMLE1yO67RaVDrYg--8aVFWQfUtIwo=w240-h480-rw" alt="Vakitler" class="w-full h-full rounded-[2.1rem] object-cover opacity-80">
+                            <!-- Dış link yerine yerel klasörden (images/) çekiyoruz -->
+                            <img src="images/vakitler.png" alt="Vakitler Logo" class="w-full h-full rounded-[2.1rem] object-cover opacity-80" onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' fill=\'%23ccc\' viewBox=\'0 0 24 24\'><path d=\'M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z\'/></svg>'">
                         </div>
                         <div class="flex-grow">
                             <h3 class="font-display text-4xl font-semibold mb-6">Vakitler</h3>
                             <p data-i18n="vakitler-desc" class="text-slate-500 dark:text-slate-400 text-lg leading-relaxed mb-10 max-w-lg">
                                 Günün doğal akışını takip etmek için bir araç. İbadetleri, teknolojik bir yük haline getirmeden, sessizce hatırlatır.
                             </p>
-                            <a href="https://play.google.com/store/apps/details?id=com.nevmara.vakitler" data-i18n="vakitler-cta" class="inline-block text-xs font-bold uppercase tracking-[0.2em] text-nev-primary">
+                            <a href="https://play.google.com/store/apps/details?id=com.nevmara.vakitler" data-i18n="vakitler-cta" class="inline-block text-xs font-bold uppercase tracking-[0.2em] text-nev-primary" target="_blank" rel="noopener noreferrer">
                                 Gözlemle →
                             </a>
                         </div>
@@ -167,15 +193,23 @@
                     <h3 class="font-display text-2xl font-semibold mb-4">Falling Animals</h3>
                     <p data-i18n="falling-desc" class="text-sm text-slate-500 dark:text-slate-400 mb-8 leading-relaxed">Zihinsel çeviklik ve odak üzerine bir deneme.</p>
                     <div class="w-16 h-16 rounded-2xl overflow-hidden opacity-60">
-                         <img src="https://play-lh.googleusercontent.com/0Teky13bReJTDxwkgtMVB8BQgeYlSKg82dBzVKtWNkby4UjHflmdK29S080GcqpgTw=w240-h480-rw" class="w-full h-full object-cover">
+                         <!-- Dış link yerine yerel klasörden (images/) çekiyoruz -->
+                         <img src="images/falling.png" alt="Falling Animals Logo" class="w-full h-full object-cover" onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' fill=\'%23ccc\' viewBox=\'0 0 24 24\'><path d=\'M21 16v-2l-8-5V3.5c0-.83-.67-1.5-1.5-1.5S10 2.67 10 3.5V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5l8 2.5z\'/></svg>'">
                     </div>
                 </div>
 
                 <!-- Great Ghost -->
-                <div class="md:col-span-2 bento-card bg-nev-darkSurface text-white rounded-5xl p-10">
-                    <h3 class="font-display text-2xl font-semibold mb-4">Great Ghost</h3>
-                    <p data-i18n="ghost-desc" class="text-slate-400 text-sm leading-relaxed mb-6">Bilinmeyenin içinde sessiz bir varoluş çabası.</p>
-                    <span data-i18n="exp-tag" class="text-[10px] uppercase tracking-widest text-nev-darkPrimary">Deneyim</span>
+                <div class="md:col-span-2 bento-card bg-nev-darkSurface text-white rounded-5xl p-10 flex flex-col justify-between">
+                    <div>
+                        <h3 class="font-display text-2xl font-semibold mb-4">Great Ghost</h3>
+                        <p data-i18n="ghost-desc" class="text-slate-400 text-sm leading-relaxed mb-6">Bilinmeyenin içinde sessiz bir varoluş çabası.</p>
+                    </div>
+                    <div class="flex items-end justify-between mt-4">
+                        <span data-i18n="exp-tag" class="text-[10px] uppercase tracking-widest text-nev-darkPrimary mb-2">Deneyim</span>
+                        <div class="w-16 h-16 rounded-2xl overflow-hidden opacity-80 bg-white/5">
+                             <img src="images/great.png" alt="Great Ghost Logo" class="w-full h-full object-cover" onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' fill=\'%236d28d9\' viewBox=\'0 0 24 24\'><path d=\'M12 2C8.69 2 6 4.69 6 8v8c0 3.31 2.69 6 6 6s6-2.69 6-6V8c0-3.31-2.69-6-6-6zm0 18c-2.21 0-4-1.79-4-4V8c0-2.21 1.79-4 4-4s4 1.79 4 4v8c0 2.21-1.79 4-4 4zm-1-9h2v4h-2zm0-4h2v2h-2z\'/></svg>'">
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -206,7 +240,8 @@
                     <h5 data-i18n="footer-contact" class="text-[10px] uppercase tracking-widest text-slate-400">İrtibat</h5>
                     <ul class="text-sm space-y-2 text-slate-500">
                         <li><a href="mailto:nevmara@outlook.com" data-i18n="footer-email" class="hover:text-nev-primary transition-colors">E-Posta</a></li>
-                        <li><a href="https://x.com/nevmarasoftware" class="hover:text-nev-primary transition-colors">Twitter (X)</a></li>
+                        <li><a href="https://x.com/nevmarasoftware" target="_blank" rel="noopener noreferrer" class="hover:text-nev-primary transition-colors">Twitter (X)</a></li>
+                        <li><a href="https://www.youtube.com/@nevmara" target="_blank" rel="noopener noreferrer" class="hover:text-nev-primary transition-colors">YouTube</a></li>
                     </ul>
                 </div>
                 <div class="space-y-4">
@@ -229,7 +264,7 @@
             <div class="p-12 max-h-[80vh] overflow-y-auto">
                 <div class="flex justify-between items-center mb-10">
                     <h3 data-i18n="modal-privacy-title" class="font-display text-2xl font-bold">Gizlilik</h3>
-                    <button id="close-privacy-btn" class="opacity-50 hover:opacity-100">✕</button>
+                    <button id="close-privacy-btn" class="opacity-50 hover:opacity-100 text-2xl" aria-label="Close modal">&times;</button>
                 </div>
                 <div id="privacy-content-area" class="prose dark:prose-invert prose-sm">
                     <p data-i18n="modal-loading">Dosya okunuyor...</p>
@@ -250,11 +285,11 @@
                 "hero-cta-1": "Üretimlerimize Bak",
                 "hero-cta-2": "Anlayışımız",
                 "projects-title": "Somut Yansımalar",
-                "vakitler-desc": "Günün doğal akışını takip etmek için bir araç. İbadetleri, teknolojik bir yük haline getirmeden, sessizce hatırlatır.",
+                "vakitler-desc": "Günlük ibadetlerinizi kolayca takip etmenize yardımcı olur. Diyanet İşleri Başkanlığı'nın verileriyle, Dünya'nın tüm şehirleri için en doğru ve güncel namaz vakitlerini sunar.",
                 "vakitler-cta": "Gözlemle →",
-                "falling-desc": "Zihinsel çeviklik ve odak üzerine bir deneme.",
-                "ghost-desc": "Bilinmeyenin içinde sessiz bir varoluş çabası.",
-                "exp-tag": "Deneyim",
+                "falling-desc": "Bulutlara sığınan hayvanlar düşmeye başlıyor! Onlara dokunarak kurtarın ve gökyüzünden düşen kayalardan kaçının.",
+                "ghost-desc": "Zorlu sütunlar arasında gezinen bir hayalete rehberlik edin. Telefonunuzu eğerek reflekslerinizi test edin ve en yüksek puanı toplayın.",
+                "exp-tag": "Oyun",
                 "manifesto-title": "Mesele, daha azına sahip olmaktır.",
                 "manifesto-p1": "Yazılımın hayatımızı kolaylaştırması gerektiğine inanıyoruz, onu ele geçirmesine değil.",
                 "manifesto-p2": "Bizim için başarı; bir uygulamanın kaç saat kullanıldığı değil, kullanıcısına kaç dakika zaman kazandırdığıdır.",
@@ -276,11 +311,11 @@
                 "hero-cta-1": "View Our Works",
                 "hero-cta-2": "Philosophy",
                 "projects-title": "Tangible Reflections",
-                "vakitler-desc": "A tool to follow the natural flow of the day. It reminds of prayers silently, without turning them into a technological burden.",
+                "vakitler-desc": "Easily track your daily prayers. Provides the most accurate and up-to-date prayer times for all cities worldwide using Diyanet data.",
                 "vakitler-cta": "Observe →",
-                "falling-desc": "An experiment on mental agility and focus.",
-                "ghost-desc": "A silent effort of existence within the unknown.",
-                "exp-tag": "Experience",
+                "falling-desc": "Animals that took refuge in the clouds are falling! Tap to save them while avoiding the dangerous falling rocks.",
+                "ghost-desc": "Guide a ghost navigating through challenging pillars. Tilt your phone to test your reflexes and aim for the highest score.",
+                "exp-tag": "Game",
                 "manifesto-title": "The point is to have less.",
                 "manifesto-p1": "We believe software should simplify our lives, not take them over.",
                 "manifesto-p2": "For us, success is not how many hours an app is used, but how many minutes it saves for the user.",
@@ -290,7 +325,7 @@
                 "footer-email": "Email",
                 "footer-docs": "Documents",
                 "footer-privacy": "Privacy Approach",
-                "modal-privacy-title": "Privacy",
+                "modal-privacy-title": "Privacy Policy",
                 "modal-loading": "Reading file..."
             }
         };
@@ -307,6 +342,12 @@
             document.getElementById('lang-toggle').textContent = lang === 'tr' ? 'EN' : 'TR';
             document.documentElement.lang = lang;
             localStorage.setItem('lang', lang);
+
+            // Eğer modal şu an açıksa, içeriği yeni dile göre tekrar çek
+            const modal = document.getElementById('privacy-modal');
+            if (modal && !modal.classList.contains('hidden')) {
+                fetchPrivacy();
+            }
         }
 
         document.getElementById('lang-toggle').addEventListener('click', () => {
@@ -314,7 +355,7 @@
             updateLanguage(currentLang);
         });
 
-        // Initial language load
+        // Sayfa ilk yüklendiğinde dili ayarla
         updateLanguage(currentLang);
 
         // --- Theme Logic ---
@@ -328,7 +369,7 @@
             localStorage.setItem('theme', htmlEl.classList.contains('dark') ? 'dark' : 'light');
         });
 
-        // --- Privacy Modal ---
+        // --- Privacy Modal Logic ---
         const modal = document.getElementById('privacy-modal');
         const panel = document.getElementById('modal-panel');
         const openBtn = document.getElementById('open-privacy');
@@ -336,14 +377,26 @@
         const backdrop = document.getElementById('modal-backdrop');
         const contentArea = document.getElementById('privacy-content-area');
 
+        // YENİ DİL MANTIĞI EKLENDİ (Dil dosyalarını ayırıyoruz)
         async function fetchPrivacy() {
             try {
-                // Dil bazlı dosya kontrolü yapabilirsin (PRIVACY_en.md gibi)
-                const res = await fetch('PRIVACY.md');
-                const text = res.ok ? await res.text() : (currentLang === 'tr' ? "# Gizlilik Politikası\nHenüz eklenmedi." : "# Privacy Policy\nNot added yet.");
-                contentArea.innerHTML = marked.parse(text);
+                contentArea.innerHTML = `<p>${translations[currentLang]["modal-loading"]}</p>`;
+                
+                // Tr ise PRIVACY_tr.md, En ise PRIVACY_en.md dosyasını çağır
+                const fileName = currentLang === 'tr' ? 'PRIVACY_tr.md' : 'PRIVACY_en.md';
+                const res = await fetch(fileName);
+                
+                if (res.ok) {
+                    const text = await res.text();
+                    contentArea.innerHTML = marked.parse(text);
+                } else {
+                    // Dosya bulunamazsa varsayılan metin
+                    contentArea.innerHTML = currentLang === 'tr' 
+                        ? `<h3>Gizlilik Politikası</h3><p>Şu anda bu dile ait gizlilik politikası (${fileName}) dosyası bulunamadı.</p>`
+                        : `<h3>Privacy Policy</h3><p>Privacy policy file (${fileName}) could not be found for this language.</p>`;
+                }
             } catch {
-                contentArea.innerHTML = currentLang === 'tr' ? "<p>Bir hata oluştu.</p>" : "<p>An error occurred.</p>";
+                contentArea.innerHTML = currentLang === 'tr' ? "<p>Dosya yüklenirken bir hata oluştu.</p>" : "<p>An error occurred while loading.</p>";
             }
         }
 
@@ -351,10 +404,12 @@
             if(show) {
                 modal.classList.remove('hidden');
                 modal.classList.add('flex');
+                document.body.style.overflow = 'hidden'; // Arka plan kaymasını engelle
                 fetchPrivacy();
                 setTimeout(() => panel.classList.remove('translate-y-20'), 10);
             } else {
                 panel.classList.add('translate-y-20');
+                document.body.style.overflow = ''; // Arka plan kaymasını geri aç
                 setTimeout(() => {
                     modal.classList.add('hidden');
                     modal.classList.remove('flex');
@@ -366,11 +421,19 @@
         closeBtn.addEventListener('click', () => toggleModal(false));
         backdrop.addEventListener('click', () => toggleModal(false));
 
+        // Kapatma tuşu (ESC) desteği
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && !modal.classList.contains('hidden')) {
+                toggleModal(false);
+            }
+        });
+
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
                     entry.target.classList.add('animate-reveal');
                     entry.target.classList.remove('opacity-0');
+                    observer.unobserve(entry.target); // Sadece bir kere animasyon oynasın
                 }
             });
         }, { threshold: 0.1 });

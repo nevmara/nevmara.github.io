@@ -1,2 +1,3 @@
 User-agent: *
-Disallow: /PRIVACY.md
+Disallow: /PRIVACY_en.md
+Disallow: /PRIVACY_tr.md
