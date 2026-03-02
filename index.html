@@ -485,6 +485,17 @@
         closeBtn.addEventListener('click', () => toggleModal(false));
         backdrop.addEventListener('click', () => toggleModal(false));
 
+        function shouldOpenPrivacyFromUrl() {
+            const params = new URLSearchParams(window.location.search);
+            const openParam = (params.get('open') || '').toLowerCase();
+            const hash = (window.location.hash || '').toLowerCase();
+            return openParam === 'privacy' || hash === '#privacy';
+        }
+
+        if (shouldOpenPrivacyFromUrl()) {
+            toggleModal(true);
+        }
+
         // Kapatma tuşu (ESC) desteği
         document.addEventListener('keydown', (e) => {
             if (e.key === 'Escape' && !modal.classList.contains('hidden')) {

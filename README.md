@@ -64,6 +64,13 @@ Bu repo GitHub Pages ile statik olarak yayınlanır.
 - Branch: `main`
 - Kök dizin: `/` (repo root)
 
+## Doğrudan Gizlilik Linki
+
+Sayfayı "Uygulama Gizlilik Politikaları" modalı açık başlayacak şekilde açmak için şu URL'lerden birini kullanabilirsiniz:
+
+- `https://nevmara.github.io/#privacy`
+- `https://nevmara.github.io/?open=privacy`
+
 ## İçerik Güncelleme Rehberi
 
 - Metinler ve UI: `index.html`

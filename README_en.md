@@ -64,6 +64,13 @@ Published via GitHub Pages as a static site.
 - Branch: `main`
 - Root directory: `/` (repo root)
 
+## Direct Privacy Link
+
+To open the page with the "App Privacy Policies" modal already visible, use one of these URLs:
+
+- `https://nevmara.github.io/#privacy`
+- `https://nevmara.github.io/?open=privacy`
+
 ## Content Update Guide
 
 - Main content/UI: `index.html`
