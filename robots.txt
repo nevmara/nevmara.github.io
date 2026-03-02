@@ -1,3 +1,4 @@
 User-agent: *
 Disallow: /PRIVACY_en.md
 Disallow: /PRIVACY_tr.md
+Sitemap: https://nevmara.github.io/sitemap.xml
