@@ -75,4 +75,4 @@ Gizlilik Politikamızı zaman zaman güncelleyebiliriz. Yeni Gizlilik Politikas�
 
 Bu Gizlilik Politikası hakkında herhangi bir sorunuz varsa veya veri silme talebinde bulunmak istiyorsanız, bizimle iletişime geçebilirsiniz:
 
-* E-posta ile: nevmara@outlook.com *
+* E-posta ile: nevmara@outlook.com

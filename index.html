@@ -283,28 +283,6 @@
         İçeriğe geç
     </a>
 
-    <!-- MD3 2026 Floating Glass Navigation -->
-    <nav class="fixed bottom-6 left-1/2 -translate-x-1/2 z-50 w-[92%] max-w-[420px] animate-spring-up" style="animation-delay: 0.5s; opacity: 0;">
-        <div class="md-glass md-elevation-2 rounded-full px-6 py-3.5 flex justify-between items-center text-md-onSurface">
-            <a href="#" class="font-display font-bold text-xl tracking-tight text-md-onSurface hover:text-md-primary transition-colors flex items-center gap-2">
-                NEVMARA
-            </a>
-            <div class="flex items-center gap-4">
-                <a href="#apps" data-i18n="nav-traces" class="text-xs font-semibold uppercase tracking-widest text-md-onSurfaceVariant hover:text-md-onSurface transition-colors hidden sm:block"></a>
-                <a href="#manifesto" data-i18n="nav-soul" class="text-xs font-semibold uppercase tracking-widest text-md-onSurfaceVariant hover:text-md-onSurface transition-colors hidden sm:block"></a>
-                
-                <div class="h-5 w-[1px] bg-md-outlineVariant/50 hidden sm:block"></div>
-                
-                <button id="lang-toggle" class="text-xs font-bold uppercase tracking-widest text-md-primary hover:text-md-onSurface transition-colors px-2 py-1 md-state-layer rounded-md">EN</button>
-                
-                <button id="theme-toggle" class="text-md-onSurfaceVariant hover:text-md-primary transition-colors md-state-layer rounded-full p-2" aria-label="Temayı Değiştir">
-                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path>
-                    </svg>
-                </button>
-            </div>
-        </div>
-    </nav>
 
     <main id="main-content" class="px-6 md:px-12 relative z-10">
         
@@ -314,23 +292,8 @@
         <!-- Hero Section -->
         <section class="min-h-[95vh] flex flex-col justify-center items-center text-center max-w-5xl mx-auto pt-20 pb-12 relative">
             <div class="animate-spring-up opacity-0 relative z-10" style="animation-delay: 0.1s;">
-                <h1 class="font-display text-5xl md:text-7xl lg:text-[5.5rem] font-light tracking-tight leading-[1.1] mb-8 text-md-onSurface">
-                    <span data-i18n="hero-title-1" class="block"></span> 
-                    <span data-i18n="hero-title-2" class="italic font-normal text-transparent bg-clip-text bg-gradient-to-r from-md-primary to-md-tertiary"></span>
+                <h1 class="font-display text-5xl md:text-7xl lg:text-[5.5rem] font-light tracking-tight leading-[1.1] mb-8 text-md-onSurface" data-i18n="hero-slogan">
                 </h1>
-                
-                <p data-i18n="hero-desc" class="text-lg md:text-xl text-md-onSurfaceVariant max-w-2xl mx-auto mb-12 leading-relaxed font-medium">
-                </p>
-                
-                <!-- MD3 2026 Pill Buttons -->
-                <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
-                    <a href="#apps" class="group relative md-state-layer bg-md-primary text-md-onPrimary rounded-full px-8 py-4 text-sm font-semibold tracking-wide transition-all hover:shadow-lg hover:shadow-md-primary/20 md-elevation-1 overflow-hidden flex items-center gap-2">
-                        <span data-i18n="hero-cta-1"></span>
-                        <svg class="w-4 h-4 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
-                    </a>
-                    <a href="#manifesto" data-i18n="hero-cta-2" class="md-state-layer text-md-onSurface rounded-full px-8 py-4 text-sm font-semibold tracking-wide transition-all border border-md-outlineVariant/50 hover:bg-md-surfaceContainer hover:border-md-outline">
-                    </a>
-                </div>
             </div>
         </section>
 
@@ -435,18 +398,23 @@
                 </p>
             </div>
             
-            <div class="flex flex-wrap gap-16 md:gap-24">
-                <div class="space-y-6">
-                    <h5 data-i18n="footer-contact" class="text-sm font-bold uppercase tracking-widest text-md-onSurface"></h5>
-                    <ul class="text-base space-y-4 text-md-onSurfaceVariant font-medium">
+            <div class="w-full flex flex-col md:flex-row gap-10 md:gap-24">
+                <div class="space-y-4 w-full md:w-auto">
+                    <h5 data-i18n="footer-contact" class="text-sm font-bold uppercase tracking-widest text-md-onSurface mb-2"></h5>
+                    <ul class="text-base space-y-3 text-md-onSurfaceVariant font-medium">
                         <li><a href="mailto:nevmara@outlook.com" data-i18n="footer-email" class="hover:text-md-primary transition-colors flex items-center gap-2"></a></li>
-                        <li><a href="https://x.com/nevmarasoftware" target="_blank" rel="noopener noreferrer" class="hover:text-md-primary transition-colors flex items-center gap-2">Twitter <span class="text-xs opacity-50">(X)</span></a></li>
+                    </ul>
+                </div>
+                <div class="space-y-4 w-full md:w-auto">
+                    <h5 data-i18n="footer-social" class="text-sm font-bold uppercase tracking-widest text-md-onSurface mb-2"></h5>
+                    <ul class="text-base space-y-3 text-md-onSurfaceVariant font-medium">
+                        <li><a href="https://x.com/nevmarasoftware" target="_blank" rel="noopener noreferrer" class="hover:text-md-primary transition-colors flex items-center gap-2">X <span class="text-xs opacity-50">(Twitter)</span></a></li>
                         <li><a href="https://www.youtube.com/@nevmara" target="_blank" rel="noopener noreferrer" class="hover:text-md-primary transition-colors">YouTube</a></li>
                     </ul>
                 </div>
-                <div class="space-y-6">
-                    <h5 data-i18n="footer-docs" class="text-sm font-bold uppercase tracking-widest text-md-onSurface"></h5>
-                    <ul class="text-base space-y-4 text-md-onSurfaceVariant font-medium">
+                <div class="space-y-4 w-full md:w-auto">
+                    <h5 data-i18n="footer-docs" class="text-sm font-bold uppercase tracking-widest text-md-onSurface mb-2"></h5>
+                    <ul class="text-base space-y-3 text-md-onSurfaceVariant font-medium">
                         <li><button id="open-privacy" data-i18n="footer-privacy" class="hover:text-md-primary transition-colors text-left"></button></li>
                     </ul>
                 </div>
@@ -454,9 +422,17 @@
         </div>
         <div class="max-w-7xl mx-auto mt-20 pt-8 border-t border-md-outlineVariant/20 flex flex-col md:flex-row justify-between items-center gap-4">
             <p class="text-sm text-md-onSurfaceVariant font-semibold tracking-wide">© 2026 Nevmara Software</p>
-            <p class="text-sm text-md-onSurfaceVariant opacity-60 flex items-center gap-1">
-                Designed with <span class="text-md-tertiary">♥</span> for the future.
-            </p>
+            <div class="flex items-center gap-4">
+                <p class="text-sm text-md-onSurfaceVariant opacity-60 flex items-center gap-1 mb-0">
+                    Designed with <span class="text-md-tertiary">♥</span> for the future.
+                </p>
+                <button id="lang-toggle" class="text-xs font-bold uppercase tracking-widest text-md-primary hover:text-md-onSurface transition-colors px-3 py-1 md-state-layer rounded-md">EN</button>
+                <button id="theme-toggle" class="text-md-onSurfaceVariant hover:text-md-primary transition-colors md-state-layer rounded-full p-2" aria-label="Temayı Değiştir">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path>
+                    </svg>
+                </button>
+            </div>
         </div>
     </footer>
 
@@ -500,79 +476,65 @@
         // --- Gelişmiş Çeviri Sistemi ---
         const translations = {
             tr: {
+                "hero-slogan": "Dijital dünyada anlamlı izler bırakıyoruz.",
                 "hero-title-1": "Dijital dünyada",
                 "hero-title-2": "anlamlı izler bırakıyoruz.",
                 "hero-desc": "Nevmara, insan odaklı, estetik ve işlevsel yazılımlar geliştiren bağımsız bir stüdyodur. Karmaşadan uzak, amaca hizmet eden dijital deneyimler tasarlıyoruz.",
                 "hero-cta-1": "Uygulamaları Keşfet",
                 "hero-cta-2": "Manifestomuzu Oku",
-                
                 "nav-traces": "Projeler",
-                "nav-soul": "Felsefemiz",
-                
-                "projects-title": "Ürettiklerimiz",
-                
+                "nav-about": "Hakkımızda",
+                "projects-title": "Projelerimiz",
                 "vakitler-desc": "Namaz vakti uygulamamız, günlük ibadetlerinizi eksiksiz ve kolayca takip etmenize yardımcı olmak için kapsamlı özelliklerle donatılmıştır.",
                 "vakitler-cta": "Google Play'de İncele",
-                
                 "falling-desc": "Dünyada yaşanacak yer kalmayınca hayvanlar bulutlara sığındı. Ancak bir sorun var: hayvanlar bulutlardan düşmeye başlıyor!",
                 "falling-cta": "Oyunu İndir",
-                
                 "ghost-desc": "Great Ghost ile heyecan verici bir maceraya atılın! Zorlu sütunlar arasında gezinen oyuncu bir hayalete rehberlik edin.",
                 "ghost-cta": "Oyunu İndir",
-
                 "sudoku-desc": "Zihninizi dinlendirin ve mantığınızı geliştirin! Sudoku, her yaştan bulmaca sever için tasarlanmış, modern ve kullanıcı dostu bir arayüze sahip klasik bir sayı bulmaca oyunudur.",
                 "sudoku-cta": "Oyunu İndir",
-
                 "manifesto-title": "Karmaşadan Uzak, Öze Odaklı.",
                 "manifesto-p1": "Teknolojinin amacı hayatı zorlaştırmak, bildirimlerle zihni yormak veya zamanı çalmak değil; aksine hayatı daha anlamlı ve yönetilebilir kılmaktır.",
                 "manifesto-p2": "Biz Nevmara olarak, kullanıcının vaktine, mahremiyetine ve zihnine saygı duyan araçlar üretiyoruz. Algoritmaların kölesi olmayan, kendi isteğinizle açıp huzurla kapattığınız uygulamalar.",
                 "manifesto-p3": "Sade, güçlü ve sessizce işini yapan yazılımlar tasarlamaya inanıyoruz.",
-
                 "footer-tagline": "Dijital dünyada anlamlı izler bırakan bağımsız bir stüdyo.",
-                "footer-contact": "İrtibat Kurun",
+                "footer-contact": "İletişim",
                 "footer-email": "E-Posta Gönder",
+                "footer-social": "Bizi Takip Edin",
                 "footer-docs": "Yasal Belgeler",
                 "footer-privacy": "Uygulama Gizlilik Politikaları",
-
                 "modal-privacy-title": "Uygulama Gizlilik Politikaları",
                 "modal-scope-note": "Bu metinler web sitesi için değil, Nevmara mobil uygulamaları için geçerlidir.",
                 "modal-loading": "Belge sunucudan alınıyor..."
             },
             en: {
+                "hero-slogan": "Leaving meaningful traces in the digital world.",
                 "hero-title-1": "Leaving meaningful",
                 "hero-title-2": "traces in the digital world.",
                 "hero-desc": "Nevmara is an independent studio developing human-centric, aesthetic, and functional software. We design digital experiences that serve a purpose, far from the chaos.",
                 "hero-cta-1": "Explore Apps",
                 "hero-cta-2": "Read Manifesto",
-                
                 "nav-traces": "Projects",
-                "nav-soul": "Philosophy",
-                
-                "projects-title": "Our Creations",
-                
+                "nav-about": "About Us",
+                "projects-title": "Our Projects",
                 "vakitler-desc": "Our prayer time app is packed with comprehensive features to help you keep track of your daily prayers easily and without missing a beat.",
                 "vakitler-cta": "View on Google Play",
-                
                 "falling-desc": "When there was no place left to live on Earth, the animals took refuge in the clouds. But there’s a problem: the animals are starting to fall from the clouds!",
                 "falling-cta": "Download Game",
-                
                 "ghost-desc": "Embark on an exciting adventure with Great Ghost! Guide a ghost as it navigates through challenging columns.",
                 "ghost-cta": "Download Game",
-
                 "sudoku-desc": "Give your mind a break and sharpen your logic! Sudoku is a classic number puzzle game designed for puzzle lovers of all ages, featuring a modern and user-friendly interface.",
                 "sudoku-cta": "Download Game",
-
                 "manifesto-title": "Away from Chaos, Focused on Core.",
                 "manifesto-p1": "The purpose of technology is not to complicate life, exhaust the mind with notifications, or steal time; but rather to make life more meaningful and manageable.",
                 "manifesto-p2": "At Nevmara, we build tools that respect the user's time, privacy, and mind. Applications that aren't slaves to algorithms, which you open willingly and close peacefully.",
                 "manifesto-p3": "We believe in designing software that is simple, powerful, and quietly does its job.",
-
                 "footer-tagline": "An independent studio leaving meaningful traces in the digital realm.",
-                "footer-contact": "Get in Touch",
+                "footer-contact": "Contact",
                 "footer-email": "Send an Email",
+                "footer-social": "Follow Us",
                 "footer-docs": "Legal Documents",
                 "footer-privacy": "App Privacy Policies",
-
                 "modal-privacy-title": "App Privacy Policies",
                 "modal-scope-note": "These documents apply to Nevmara mobile applications, not this website.",
                 "modal-loading": "Fetching document from server..."

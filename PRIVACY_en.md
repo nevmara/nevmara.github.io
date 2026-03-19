@@ -75,4 +75,4 @@ We may update Our Privacy Policy from time to time. We will notify You of any ch
 
 If you have any questions about this Privacy Policy or wish to make a data deletion request, you can contact us:
 
-* By email: nevmara@outlook.com *
+* By email: nevmara@outlook.com
