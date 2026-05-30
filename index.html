@@ -23,7 +23,8 @@
     <meta property="og:locale:alternate" content="en_US">
     <meta property="og:title" content="Nevmara Software">
     <meta property="og:description" content="Karmaşadan uzak, amaca hizmet eden dijital deneyimler.">
-    <meta property="og:image" content="https://nevmara.github.io/images/og-image.jpg">
+    <meta property="og:image" content="https://nevmara.github.io/images/og-image.webp">
+    <meta property="og:image:type" content="image/webp">
 
     <title>Nevmara</title>
     
@@ -32,8 +33,10 @@
     <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
     
     <!-- Kütüphaneler -->
-    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="manifest" href="manifest.webmanifest">
+    <link rel="stylesheet" href="assets/css/styles.css">
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js" defer></script>
+    <script defer data-domain="nevmara.github.io" src="https://plausible.io/js/script.js"></script>
     
     <!-- Tipografi -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -41,7 +44,7 @@
     <!-- MD3 2026: Yüksek kontrastlı Serif ve okunabilir Sans-serif kombinasyonu -->
     <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,600;1,9..144,300;1,9..144,400&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-    <!-- Material Design 3 (2026) Değişkenleri & Tailwind Yapılandırması -->
+    <!-- Material Design 3 (2026) Değişkenleri -->
     <style>
         :root {
             /* Light Theme MD3 Tokens - Refined for 2026 */
@@ -214,68 +217,6 @@
         .dark .hero-glow { opacity: 0.15; }
 
     </style>
-
-    <script>
-        tailwind.config = {
-            darkMode: 'class',
-            theme: {
-                extend: {
-                    fontFamily: {
-                        sans: ['Plus Jakarta Sans', 'system-ui', 'sans-serif'],
-                        display: ['Fraunces', 'serif'],
-                    },
-                    colors: {
-                        md: {
-                            primary: 'var(--md-sys-color-primary)',
-                            onPrimary: 'var(--md-sys-color-on-primary)',
-                            primaryContainer: 'var(--md-sys-color-primary-container)',
-                            onPrimaryContainer: 'var(--md-sys-color-on-primary-container)',
-                            secondary: 'var(--md-sys-color-secondary)',
-                            onSecondary: 'var(--md-sys-color-on-secondary)',
-                            secondaryContainer: 'var(--md-sys-color-secondary-container)',
-                            onSecondaryContainer: 'var(--md-sys-color-on-secondary-container)',
-                            tertiary: 'var(--md-sys-color-tertiary)',
-                            onTertiary: 'var(--md-sys-color-on-tertiary)',
-                            tertiaryContainer: 'var(--md-sys-color-tertiary-container)',
-                            onTertiaryContainer: 'var(--md-sys-color-on-tertiary-container)',
-                            surface: 'var(--md-sys-color-surface)',
-                            onSurface: 'var(--md-sys-color-on-surface)',
-                            surfaceVariant: 'var(--md-sys-color-surface-variant)',
-                            onSurfaceVariant: 'var(--md-sys-color-on-surface-variant)',
-                            surfaceContainerLowest: 'var(--md-sys-color-surface-container-lowest)',
-                            surfaceContainerLow: 'var(--md-sys-color-surface-container-low)',
-                            surfaceContainer: 'var(--md-sys-color-surface-container)',
-                            surfaceContainerHigh: 'var(--md-sys-color-surface-container-high)',
-                            surfaceContainerHighest: 'var(--md-sys-color-surface-container-highest)',
-                            inverseSurface: 'var(--md-sys-color-inverse-surface)',
-                            inverseOnSurface: 'var(--md-sys-color-inverse-on-surface)',
-                            inversePrimary: 'var(--md-sys-color-inverse-primary)',
-                            outline: 'var(--md-sys-color-outline)',
-                            outlineVariant: 'var(--md-sys-color-outline-variant)',
-                        }
-                    },
-                    borderRadius: {
-                        'md-card': '32px', /* MD3 2026 Extra Large Card */
-                        'md-modal': '36px', /* MD3 Bottom Sheet */
-                    },
-                    animation: {
-                        'spring-up': 'springUp 1s cubic-bezier(0.175, 0.885, 0.32, 1.1) forwards',
-                        'fade-in': 'fadeIn 0.8s ease forwards',
-                    },
-                    keyframes: {
-                        springUp: {
-                            '0%': { opacity: 0, transform: 'translateY(40px)' },
-                            '100%': { opacity: 1, transform: 'translateY(0)' },
-                        },
-                        fadeIn: {
-                            '0%': { opacity: 0 },
-                            '100%': { opacity: 1 },
-                        }
-                    }
-                }
-            }
-        }
-    </script>
 </head>
 <body class="antialiased selection:bg-md-primaryContainer selection:text-md-onPrimaryContainer relative">
 
@@ -308,7 +249,7 @@
                 <div class="md-card group md:col-span-4 md:row-span-2 bg-md-surfaceContainerLow hover:bg-md-surfaceContainer rounded-md-card p-8 lg:p-14 border border-md-outlineVariant/20 flex flex-col animate-spring-up opacity-0" style="animation-delay: 0.3s;">
                     <div class="flex flex-col md:flex-row gap-10 items-start h-full">
                         <div class="md-img-scale w-24 h-24 md:w-36 md:h-36 shrink-0 rounded-[28px] bg-md-surfaceContainerHighest p-2 shadow-sm overflow-hidden">
-                            <img src="images/vakitler.png" alt="Vakitler Logo" width="144" height="144" class="w-full h-full rounded-[20px] object-cover bg-black" loading="lazy" decoding="async">
+                            <img src="images/vakitler.webp" alt="Vakitler Logo" width="144" height="144" class="w-full h-full rounded-[20px] object-cover bg-black" loading="lazy" decoding="async">
                         </div>
                         <div class="flex-grow flex flex-col h-full justify-between">
                             <div>
@@ -335,7 +276,7 @@
                             <span data-i18n="falling-cta"></span> <span>&rarr;</span>
                         </a>
                         <div class="md-img-scale w-16 h-16 rounded-[20px] overflow-hidden shadow-sm bg-md-surfaceContainerHighest p-1">
-                             <img src="images/falling.png" alt="Falling Animals Logo" width="64" height="64" class="w-full h-full rounded-[14px] object-cover" loading="lazy" decoding="async">
+                             <img src="images/falling.webp" alt="Falling Animals Logo" width="64" height="64" class="w-full h-full rounded-[14px] object-cover" loading="lazy" decoding="async">
                         </div>
                     </div>
                 </div>
@@ -351,7 +292,7 @@
                             <span data-i18n="ghost-cta"></span> <span>&rarr;</span>
                         </a>
                         <div class="md-img-scale w-16 h-16 rounded-[20px] overflow-hidden bg-white/10 p-1">
-                             <img src="images/great.png" alt="Great Ghost Logo" width="64" height="64" class="w-full h-full rounded-[14px] object-cover" loading="lazy" decoding="async">
+                             <img src="images/great.webp" alt="Great Ghost Logo" width="64" height="64" class="w-full h-full rounded-[14px] object-cover" loading="lazy" decoding="async">
                         </div>
                     </div>
                 </div>
@@ -367,7 +308,7 @@
                             <span data-i18n="sudoku-cta"></span> <span>&rarr;</span>
                         </a>
                         <div class="md-img-scale w-16 h-16 rounded-[20px] overflow-hidden shadow-sm bg-md-surfaceContainerHighest p-1">
-                             <img src="images/sudoku.png" alt="Sudoku Logo" width="64" height="64" class="w-full h-full rounded-[14px] object-cover" loading="lazy" decoding="async">
+                             <img src="images/sudoku.webp" alt="Sudoku Logo" width="64" height="64" class="w-full h-full rounded-[14px] object-cover" loading="lazy" decoding="async">
                         </div>
                     </div>
                 </div>
@@ -708,6 +649,14 @@
             el.style.animationPlayState = 'paused';
             observer.observe(el);
         });
+
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('./sw.js').catch(() => {
+                    // Service worker isteğe bağlıdır; kayıt hatası kullanıcı akışını etkilemez.
+                });
+            });
+        }
     </script>
 </body>
 </html>

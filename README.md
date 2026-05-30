@@ -33,17 +33,24 @@ Bu repo; geliştirici kimliğini, üretilen uygulamaları ve iletişim kanallar�
 ├─ PRIVACY_en.md
 ├─ images/
 │  ├─ apple-touch-icon.png
-│  ├─ og-image.jpg
-│  ├─ vakitler.png
-│  ├─ falling.png
-│  ├─ great.png
-│  └─ logo.png
+│  ├─ icon-192.png
+│  ├─ icon-512.png
+│  ├─ og-image.webp
+│  ├─ vakitler.webp
+│  ├─ falling.webp
+│  ├─ great.webp
+│  └─ sudoku.webp
 └─ logo.svg
 ```
 
 ## Yerelde Çalıştırma
 
-Build adımı yoktur. Dosyaları doğrudan servis etmeniz yeterlidir.
+Build adımı vardır. Önce bağımlılıkları kurun, sonra üretim dosyalarını oluşturun.
+
+```bash
+npm install
+npm run build
+```
 
 Örnek (Python):
 
@@ -75,12 +82,13 @@ Sayfayı "Uygulama Gizlilik Politikaları" modalı açık başlayacak şekilde a
 
 - Metinler ve UI: `index.html`
 - Gizlilik içerikleri: `PRIVACY_tr.md`, `PRIVACY_en.md`
-- Sosyal/SEO görseli: `images/og-image.jpg`
-- Uygulama kart görselleri: `images/` altındaki ilgili PNG dosyaları
+- Sosyal/SEO görseli: `images/og-image.webp`
+- Uygulama kart görselleri: `images/` altındaki ilgili WebP dosyaları
+- PWA ikonları: `images/icon-192.png`, `images/icon-512.png`
 
 ## Geliştirici Notları
 
-- Dış bağımlılıklar CDN üzerinden yüklenir (`tailwindcss`, `marked`).
+- Tailwind CSS üretim sırasında derlenir; `marked` ve `plausible` istemci tarafında yüklenir.
 - Gizlilik modalı dil seçimine göre ilgili markdown dosyasını istemci tarafında çeker.
 - Tüm dosya adları küçük harf standardında tutulmalıdır.
 

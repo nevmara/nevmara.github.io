@@ -1,0 +1,16 @@
+{
+  "name": "nevmara.github.io",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Nevmara Software static site build pipeline",
+  "scripts": {
+    "build:css": "tailwindcss -c tailwind.config.cjs -i ./src/input.css -o ./assets/css/styles.css --minify",
+    "build:images": "node scripts/convert-images.mjs",
+    "build": "npm run build:images && npm run build:css"
+  },
+  "devDependencies": {
+    "@tailwindcss/typography": "^0.5.16",
+    "sharp": "^0.34.1",
+    "tailwindcss": "^3.4.17"
+  }
+}

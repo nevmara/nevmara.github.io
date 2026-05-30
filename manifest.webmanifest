@@ -1,0 +1,22 @@
+{
+  "name": "Nevmara Software",
+  "short_name": "Nevmara",
+  "description": "Nevmara Software resmi web sitesi.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#FEF7FF",
+  "theme_color": "#FEF7FF",
+  "icons": [
+    {
+      "src": "images/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "images/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

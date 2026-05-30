@@ -33,17 +33,24 @@ This repository hosts the official web address that presents developer identity,
 ├─ PRIVACY_en.md
 ├─ images/
 │  ├─ apple-touch-icon.png
-│  ├─ og-image.jpg
-│  ├─ vakitler.png
-│  ├─ falling.png
-│  ├─ great.png
-│  └─ logo.png
+│  ├─ icon-192.png
+│  ├─ icon-512.png
+│  ├─ og-image.webp
+│  ├─ vakitler.webp
+│  ├─ falling.webp
+│  ├─ great.webp
+│  └─ sudoku.webp
 └─ logo.svg
 ```
 
 ## Run Locally
 
-No build step is required. Serve the directory with a static file server.
+There is a build step. Install dependencies and generate production assets first.
+
+```bash
+npm install
+npm run build
+```
 
 Example (Python):
 
@@ -75,12 +82,13 @@ To open the page with the "App Privacy Policies" modal already visible, use one 
 
 - Main content/UI: `index.html`
 - Privacy texts: `PRIVACY_tr.md`, `PRIVACY_en.md`
-- Social preview image: `images/og-image.jpg`
-- App card assets: corresponding PNG files under `images/`
+- Social preview image: `images/og-image.webp`
+- App card assets: corresponding WebP files under `images/`
+- PWA icons: `images/icon-192.png`, `images/icon-512.png`
 
 ## Developer Notes
 
-- External dependencies are loaded from CDN (`tailwindcss`, `marked`).
+- Tailwind CSS is built locally during production; `marked` and `plausible` are loaded client-side.
 - Privacy modal fetches markdown file based on selected language.
 - Keep asset names in lowercase for consistency.
 
