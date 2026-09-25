@@ -1,9 +1,11 @@
-const CACHE_NAME = 'nevmara-site-v1';
+const CACHE_NAME = 'nevmara-site-v2';
 const APP_SHELL = [
   './',
   './index.html',
   './manifest.webmanifest',
+  './favicon.ico',
   './assets/css/styles.css',
+  './assets/js/marked.min.js',
   './logo.svg',
   './images/apple-touch-icon.png',
   './PRIVACY_en.md',

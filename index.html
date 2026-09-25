@@ -8,7 +8,7 @@
     <!-- Temel SEO ve Meta Etiketleri -->
     <meta name="description" content="Nevmara Software - Dijital dünyada anlamlı izler bırakan bağımsız yazılım stüdyosu.">
     <meta name="author" content="Nevmara Software">
-    <meta name="keywords" content="nevmara, yazılım, software, vakitler, falling animals, great ghost, indie developer">
+    <meta name="keywords" content="nevmara, yazılım, software, vakitler, falling animals, great ghost, indie developer, sudoku">
     <meta name="robots" content="index,follow,max-image-preview:large">
     <link rel="canonical" href="https://nevmara.github.io/">
     
@@ -18,6 +18,7 @@
 
     <!-- Open Graph / Paylaşım Kartları -->
     <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Nevmara">
     <meta property="og:url" content="https://nevmara.github.io/">
     <meta property="og:locale" content="tr_TR">
     <meta property="og:locale:alternate" content="en_US">
@@ -25,29 +26,54 @@
     <meta property="og:description" content="Karmaşadan uzak, amaca hizmet eden dijital deneyimler.">
     <meta property="og:image" content="https://nevmara.github.io/images/og-image.webp">
     <meta property="og:image:type" content="image/webp">
+    <meta property="og:image:alt" content="Nevmara Software">
 
-    <title>Nevmara</title>
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@nevmarasoftware">
+    <meta name="twitter:creator" content="@nevmarasoftware">
+    <meta name="twitter:title" content="Nevmara Software">
+    <meta name="twitter:description" content="Karmaşadan uzak, amaca hizmet eden dijital deneyimler.">
+    <meta name="twitter:image" content="https://nevmara.github.io/images/og-image.webp">
+
+    <title>Nevmara Software</title>
     
     <!-- İkonlar -->
+    <link rel="icon" href="favicon.ico" sizes="any">
     <link rel="icon" type="image/svg+xml" href="logo.svg">
     <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
     
     <!-- Kütüphaneler -->
     <link rel="manifest" href="manifest.webmanifest">
     <link rel="stylesheet" href="assets/css/styles.css">
-    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js" defer></script>
+    <script src="assets/js/marked.min.js" defer></script>
     <script defer data-domain="nevmara.github.io" src="https://plausible.io/js/script.js"></script>
     
     <!-- Tipografi -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <!-- MD3 2026: Yüksek kontrastlı Serif ve okunabilir Sans-serif kombinasyonu -->
     <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,600;1,9..144,300;1,9..144,400&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-    <!-- Material Design 3 (2026) Değişkenleri -->
+    <!-- Structured Data (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Nevmara Software",
+      "url": "https://nevmara.github.io/",
+      "logo": "https://nevmara.github.io/logo.svg",
+      "description": "Nevmara Software - Dijital dünyada anlamlı izler bırakan bağımsız yazılım stüdyosu.",
+      "sameAs": [
+        "https://x.com/nevmarasoftware",
+        "https://www.youtube.com/@nevmara"
+      ]
+    }
+    </script>
+
+    <!-- Material Design 3 Değişkenleri ve Temel Stiller -->
     <style>
         :root {
-            /* Light Theme MD3 Tokens - Refined for 2026 */
+            /* Light Theme MD3 Tokens */
             --md-sys-color-primary: #6750A4;
             --md-sys-color-on-primary: #FFFFFF;
             --md-sys-color-primary-container: #EADDFF;
@@ -68,7 +94,6 @@
             --md-sys-color-surface-variant: #E7E0EC;
             --md-sys-color-on-surface-variant: #49454F;
             
-            /* Enhanced Surface Tonal Elevation */
             --md-sys-color-surface-container-lowest: #FFFFFF;
             --md-sys-color-surface-container-low: #F7F2FA;
             --md-sys-color-surface-container: #F3EDF7;
@@ -81,13 +106,10 @@
             
             --md-sys-color-outline: #79747E;
             --md-sys-color-outline-variant: #CAC4D0;
-            
-            --md-glass-bg: rgba(243, 237, 247, 0.75);
-            --md-glass-border: rgba(255, 255, 255, 0.4);
         }
 
         .dark {
-            /* Dark Theme MD3 Tokens - Refined for 2026 OLED/Deep Dark */
+            /* Dark Theme MD3 Tokens */
             --md-sys-color-primary: #D0BCFF;
             --md-sys-color-on-primary: #381E72;
             --md-sys-color-primary-container: #4F378B;
@@ -120,9 +142,6 @@
             
             --md-sys-color-outline: #938F99;
             --md-sys-color-outline-variant: #49454F;
-
-            --md-glass-bg: rgba(33, 31, 38, 0.75);
-            --md-glass-border: rgba(255, 255, 255, 0.05);
         }
 
         body {
@@ -155,22 +174,9 @@
         .md-state-layer:focus-visible::after { opacity: 0.12; }
         .md-state-layer:active::after { opacity: 0.16; }
 
-        /* 2026 MD3 Tonal Elevation Gölgeleri (Daha organik ve yumuşak) */
-        .md-elevation-1 { box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.05), 0px 1px 2px 0px rgba(0, 0, 0, 0.1); }
-        .md-elevation-2 { box-shadow: 0px 2px 6px 2px rgba(0, 0, 0, 0.05), 0px 1px 2px 0px rgba(0, 0, 0, 0.1); }
+        /* MD3 Tonal Elevation Gölgeleri */
         .md-elevation-3 { box-shadow: 0px 4px 8px 3px rgba(0, 0, 0, 0.05), 0px 1px 3px 0px rgba(0, 0, 0, 0.1); }
-
-        .dark .md-elevation-1 { box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.2), 0px 1px 2px 0px rgba(0, 0, 0, 0.4); }
-        .dark .md-elevation-2 { box-shadow: 0px 2px 6px 2px rgba(0, 0, 0, 0.2), 0px 1px 2px 0px rgba(0, 0, 0, 0.4); }
         .dark .md-elevation-3 { box-shadow: 0px 4px 8px 3px rgba(0, 0, 0, 0.2), 0px 1px 3px 0px rgba(0, 0, 0, 0.4); }
-
-        /* Glassmorphism Surface (2026 Trendi) */
-        .md-glass {
-            background: var(--md-glass-bg);
-            backdrop-filter: blur(16px);
-            -webkit-backdrop-filter: blur(16px);
-            border: 1px solid var(--md-glass-border);
-        }
 
         /* Organik Kart Etkileşimi */
         .md-card {
@@ -216,16 +222,32 @@
         }
         .dark .hero-glow { opacity: 0.15; }
 
+        @media (prefers-reduced-motion: reduce) {
+            *, ::before, ::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+                scroll-behavior: auto !important;
+            }
+        }
     </style>
+    <noscript>
+        <style>
+            .animate-spring-up {
+                opacity: 1 !important;
+                transform: none !important;
+                animation: none !important;
+            }
+        </style>
+    </noscript>
 </head>
 <body class="antialiased selection:bg-md-primaryContainer selection:text-md-onPrimaryContainer relative">
 
-    <a href="#main-content" class="sr-only focus:not-sr-only focus:fixed focus:top-6 focus:left-6 focus:z-[120] focus:px-6 focus:py-3 focus:rounded-full focus:bg-md-inverseSurface focus:text-md-inverseOnSurface md-elevation-3 font-medium">
+    <a href="#main-content" id="skip-link" data-i18n="skip-content" class="sr-only focus:not-sr-only focus:fixed focus:top-6 focus:left-6 focus:z-[120] focus:px-6 focus:py-3 focus:rounded-full focus:bg-md-inverseSurface focus:text-md-inverseOnSurface md-elevation-3 font-medium">
         İçeriğe geç
     </a>
 
-
-    <main id="main-content" class="px-6 md:px-12 relative z-10">
+    <main id="main-content" tabindex="-1" class="px-6 md:px-12 relative z-10 focus:outline-none">
         
         <!-- Background Ambient Glow -->
         <div class="hero-glow"></div>
@@ -234,6 +256,7 @@
         <section class="min-h-[95vh] flex flex-col justify-center items-center text-center max-w-5xl mx-auto pt-20 pb-12 relative">
             <div class="animate-spring-up opacity-0 relative z-10" style="animation-delay: 0.1s;">
                 <h1 class="font-display text-5xl md:text-7xl lg:text-[5.5rem] font-light tracking-tight leading-[1.1] mb-8 text-md-onSurface" data-i18n="hero-slogan">
+                    Dijital dünyada anlamlı izler bırakıyoruz.
                 </h1>
             </div>
         </section>
@@ -241,7 +264,9 @@
         <!-- Projects Section (Modern Bento Grid) -->
         <section id="apps" class="max-w-7xl mx-auto py-24 scroll-mt-20">
             <div class="mb-16 text-center animate-spring-up opacity-0" style="animation-delay: 0.2s;">
-                <h2 data-i18n="projects-title" class="font-display text-4xl md:text-5xl text-md-onSurface font-light italic"></h2>
+                <h2 data-i18n="projects-title" class="font-display text-4xl md:text-5xl text-md-onSurface font-light italic">
+                    Projelerimiz
+                </h2>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-6 gap-6 md:gap-8">
@@ -255,10 +280,11 @@
                             <div>
                                 <h3 class="font-display text-4xl md:text-5xl font-semibold mb-4 text-md-onSurface tracking-tight">Vakitler</h3>
                                 <p data-i18n="vakitler-desc" class="text-md-onSurfaceVariant text-base md:text-lg leading-relaxed mb-8">
+                                    Namaz vakti uygulamamız, günlük ibadetlerinizi eksiksiz ve kolayca takip etmenize yardımcı olmak için kapsamlı özelliklerle donatılmıştır.
                                 </p>
                             </div>
                             <a href="https://play.google.com/store/apps/details?id=com.nevmara.vakitler" class="md-state-layer self-start inline-flex items-center gap-2 bg-md-secondaryContainer text-md-onSecondaryContainer rounded-full px-7 py-3 text-sm font-bold transition-all hover:pr-5 group-hover:bg-md-primary group-hover:text-md-onPrimary" target="_blank" rel="noopener noreferrer">
-                                <span data-i18n="vakitler-cta"></span> 
+                                <span data-i18n="vakitler-cta">Google Play'de İncele</span> 
                                 <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
                             </a>
                         </div>
@@ -269,11 +295,13 @@
                 <div class="md-card group md:col-span-2 bg-md-surfaceContainerLow hover:bg-md-surfaceContainer rounded-md-card p-8 border border-md-outlineVariant/20 flex flex-col justify-between animate-spring-up opacity-0" style="animation-delay: 0.4s;">
                     <div>
                         <h3 class="font-display text-2xl md:text-3xl font-semibold mb-3 text-md-onSurface">Falling Animals</h3>
-                        <p data-i18n="falling-desc" class="text-sm text-md-onSurfaceVariant leading-relaxed font-medium"></p>
+                        <p data-i18n="falling-desc" class="text-sm text-md-onSurfaceVariant leading-relaxed font-medium">
+                            Dünyada yaşanacak yer kalmayınca hayvanlar bulutlara sığındı. Ancak bir sorun var: hayvanlar bulutlardan düşmeye başlıyor!
+                        </p>
                     </div>
                     <div class="flex items-end justify-between mt-8">
                         <a href="https://play.google.com/store/apps/details?id=com.nevmara.fallinganimals" class="md-state-layer text-sm font-bold text-md-primary hover:text-md-primaryContainer transition-colors flex items-center gap-1 rounded-full py-2 px-4 -ml-4" target="_blank" rel="noopener noreferrer">
-                            <span data-i18n="falling-cta"></span> <span>&rarr;</span>
+                            <span data-i18n="falling-cta">Oyunu İndir</span> <span>&rarr;</span>
                         </a>
                         <div class="md-img-scale w-16 h-16 rounded-[20px] overflow-hidden shadow-sm bg-md-surfaceContainerHighest p-1">
                              <img src="images/falling.webp" alt="Falling Animals Logo" width="64" height="64" class="w-full h-full rounded-[14px] object-cover" loading="lazy" decoding="async">
@@ -285,11 +313,13 @@
                 <div class="md-card group md:col-span-2 bg-md-inverseSurface text-md-inverseOnSurface rounded-md-card p-8 flex flex-col justify-between animate-spring-up opacity-0" style="animation-delay: 0.5s;">
                     <div>
                         <h3 class="font-display text-2xl md:text-3xl font-semibold mb-3">Great Ghost</h3>
-                        <p data-i18n="ghost-desc" class="text-md-inverseOnSurface opacity-80 text-sm leading-relaxed font-medium"></p>
+                        <p data-i18n="ghost-desc" class="text-md-inverseOnSurface opacity-80 text-sm leading-relaxed font-medium">
+                            Great Ghost ile heyecan verici bir maceraya atılın! Zorlu sütunlar arasında gezinen oyuncu bir hayalete rehberlik edin.
+                        </p>
                     </div>
                     <div class="flex items-end justify-between mt-8">
                         <a href="https://play.google.com/store/apps/details?id=com.mavier.greatghost" class="md-state-layer text-sm font-bold text-md-inversePrimary hover:text-white transition-colors flex items-center gap-1 rounded-full py-2 px-4 -ml-4" target="_blank" rel="noopener noreferrer">
-                            <span data-i18n="ghost-cta"></span> <span>&rarr;</span>
+                            <span data-i18n="ghost-cta">Oyunu İndir</span> <span>&rarr;</span>
                         </a>
                         <div class="md-img-scale w-16 h-16 rounded-[20px] overflow-hidden bg-white/10 p-1">
                              <img src="images/great.webp" alt="Great Ghost Logo" width="64" height="64" class="w-full h-full rounded-[14px] object-cover" loading="lazy" decoding="async">
@@ -301,11 +331,13 @@
                 <div class="md-card group md:col-span-2 bg-md-surfaceContainerLow hover:bg-md-surfaceContainer rounded-md-card p-8 border border-md-outlineVariant/20 flex flex-col justify-between animate-spring-up opacity-0" style="animation-delay: 0.6s;">
                     <div>
                         <h3 class="font-display text-2xl md:text-3xl font-semibold mb-3 text-md-onSurface">Sudoku</h3>
-                        <p data-i18n="sudoku-desc" class="text-sm text-md-onSurfaceVariant leading-relaxed font-medium"></p>
+                        <p data-i18n="sudoku-desc" class="text-sm text-md-onSurfaceVariant leading-relaxed font-medium">
+                            Zihninizi dinlendirin ve mantığınızı geliştirin! Sudoku, her yaştan bulmaca sever için tasarlanmış, modern ve kullanıcı dostu bir arayüze sahip klasik bir sayı bulmaca oyunudur.
+                        </p>
                     </div>
                     <div class="flex items-end justify-between mt-8">
                         <a href="https://play.google.com/store/apps/details?id=com.nevmara.sudoku" class="md-state-layer text-sm font-bold text-md-primary hover:text-md-primaryContainer transition-colors flex items-center gap-1 rounded-full py-2 px-4 -ml-4" target="_blank" rel="noopener noreferrer">
-                            <span data-i18n="sudoku-cta"></span> <span>&rarr;</span>
+                            <span data-i18n="sudoku-cta">Oyunu İndir</span> <span>&rarr;</span>
                         </a>
                         <div class="md-img-scale w-16 h-16 rounded-[20px] overflow-hidden shadow-sm bg-md-surfaceContainerHighest p-1">
                              <img src="images/sudoku.webp" alt="Sudoku Logo" width="64" height="64" class="w-full h-full rounded-[14px] object-cover" loading="lazy" decoding="async">
@@ -318,11 +350,13 @@
         <!-- Manifesto -->
         <section id="manifesto" class="max-w-3xl mx-auto py-32 text-center scroll-mt-20 relative">
             <div class="absolute inset-0 bg-md-primaryContainer/5 rounded-[4rem] -z-10 blur-3xl"></div>
-            <h2 data-i18n="manifesto-title" class="font-display text-4xl md:text-5xl lg:text-6xl font-light mb-12 italic text-md-onSurface animate-spring-up opacity-0" style="animation-delay: 0.2s;"></h2>
+            <h2 data-i18n="manifesto-title" class="font-display text-4xl md:text-5xl lg:text-6xl font-light mb-12 italic text-md-onSurface animate-spring-up opacity-0" style="animation-delay: 0.2s;">
+                Karmaşadan Uzak, Öze Odaklı.
+            </h2>
             <div class="space-y-8 text-lg md:text-2xl text-md-onSurfaceVariant font-medium leading-relaxed animate-spring-up opacity-0" style="animation-delay: 0.3s;">
-                <p data-i18n="manifesto-p1"></p>
-                <p data-i18n="manifesto-p2"></p>
-                <p data-i18n="manifesto-p3" class="text-md-primary font-semibold"></p>
+                <p data-i18n="manifesto-p1">Teknolojinin amacı hayatı zorlaştırmak, bildirimlerle zihni yormak veya zamanı çalmak değil; aksine hayatı daha anlamlı ve yönetilebilir kılmaktır.</p>
+                <p data-i18n="manifesto-p2">Biz Nevmara olarak, kullanıcının vaktine, mahremiyetine ve zihnine saygı duyan araçlar üretiyoruz. Algoritmaların kölesi olmayan, kendi isteğinizle açıp huzurla kapattığınız uygulamalar.</p>
+                <p data-i18n="manifesto-p3" class="text-md-primary font-semibold">Sade, güçlü ve sessizce işini yapan yazılımlar tasarlamaya inanıyoruz.</p>
             </div>
         </section>
     </main>
@@ -332,31 +366,32 @@
         <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-start gap-12">
             <div class="max-w-xs">
                 <h4 class="font-display text-3xl font-bold text-md-primary mb-4 flex items-center gap-2">
-                <img src="logo.svg" alt="Nevmara Logo" class="w-6 h-6">
+                    <img src="logo.svg" alt="Nevmara Logo" class="w-6 h-6 rounded-md">
                     NEVMARA
                 </h4>
                 <p data-i18n="footer-tagline" class="text-base text-md-onSurfaceVariant leading-relaxed font-medium">
+                    Dijital dünyada anlamlı izler bırakan bağımsız bir stüdyo.
                 </p>
             </div>
             
             <div class="w-full flex flex-col md:flex-row gap-10 md:gap-24">
                 <div class="space-y-4 w-full md:w-auto">
-                    <h5 data-i18n="footer-contact" class="text-sm font-bold uppercase tracking-widest text-md-onSurface mb-2"></h5>
+                    <h5 data-i18n="footer-contact" class="text-sm font-bold uppercase tracking-widest text-md-onSurface mb-2">İletişim</h5>
                     <ul class="text-base space-y-3 text-md-onSurfaceVariant font-medium">
-                        <li><a href="mailto:nevmara@outlook.com" data-i18n="footer-email" class="hover:text-md-primary transition-colors flex items-center gap-2"></a></li>
+                        <li><a href="mailto:nevmara@outlook.com" data-i18n="footer-email" class="hover:text-md-primary transition-colors flex items-center gap-2">E-Posta Gönder</a></li>
                     </ul>
                 </div>
                 <div class="space-y-4 w-full md:w-auto">
-                    <h5 data-i18n="footer-social" class="text-sm font-bold uppercase tracking-widest text-md-onSurface mb-2"></h5>
+                    <h5 data-i18n="footer-social" class="text-sm font-bold uppercase tracking-widest text-md-onSurface mb-2">Bizi Takip Edin</h5>
                     <ul class="text-base space-y-3 text-md-onSurfaceVariant font-medium">
                         <li><a href="https://x.com/nevmarasoftware" target="_blank" rel="noopener noreferrer" class="hover:text-md-primary transition-colors flex items-center gap-2">X <span class="text-xs opacity-50">(Twitter)</span></a></li>
                         <li><a href="https://www.youtube.com/@nevmara" target="_blank" rel="noopener noreferrer" class="hover:text-md-primary transition-colors">YouTube</a></li>
                     </ul>
                 </div>
                 <div class="space-y-4 w-full md:w-auto">
-                    <h5 data-i18n="footer-docs" class="text-sm font-bold uppercase tracking-widest text-md-onSurface mb-2"></h5>
+                    <h5 data-i18n="footer-docs" class="text-sm font-bold uppercase tracking-widest text-md-onSurface mb-2">Yasal Belgeler</h5>
                     <ul class="text-base space-y-3 text-md-onSurfaceVariant font-medium">
-                        <li><button id="open-privacy" data-i18n="footer-privacy" class="hover:text-md-primary transition-colors text-left"></button></li>
+                        <li><button id="open-privacy" data-i18n="footer-privacy" class="hover:text-md-primary transition-colors text-left">Uygulama Gizlilik Politikaları</button></li>
                     </ul>
                 </div>
             </div>
@@ -367,7 +402,7 @@
                 <p class="text-sm text-md-onSurfaceVariant opacity-60 flex items-center gap-1 mb-0">
                     Designed with <span class="text-md-tertiary">♥</span> for the future.
                 </p>
-                <button id="lang-toggle" class="text-xs font-bold uppercase tracking-widest text-md-primary hover:text-md-onSurface transition-colors px-3 py-1 md-state-layer rounded-md">EN</button>
+                <button id="lang-toggle" class="text-xs font-bold uppercase tracking-widest text-md-primary hover:text-md-onSurface transition-colors px-3 py-1 md-state-layer rounded-md" aria-label="İngilizceye geç">EN</button>
                 <button id="theme-toggle" class="text-md-onSurfaceVariant hover:text-md-primary transition-colors md-state-layer rounded-full p-2" aria-label="Temayı Değiştir">
                     <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path>
@@ -377,7 +412,7 @@
         </div>
     </footer>
 
-    <!-- MD3 2026 Dialog / Bottom Sheet for Privacy -->
+    <!-- MD3 Dialog / Bottom Sheet for Privacy -->
     <div id="privacy-modal" class="fixed inset-0 z-[100] hidden items-end sm:items-center justify-center sm:p-6" role="dialog" aria-modal="true" aria-labelledby="privacy-modal-title">
         <div class="absolute inset-0 bg-md-inverseSurface/40 backdrop-blur-sm modal-backdrop-anim opacity-0" id="modal-backdrop"></div>
         
@@ -391,8 +426,8 @@
 
             <div class="px-8 sm:px-12 pt-4 sm:pt-12 pb-6 flex justify-between items-start sm:items-center sticky top-0 bg-md-surfaceContainerHigh/90 backdrop-blur-md z-10 border-b border-md-outlineVariant/10">
                 <div>
-                    <h3 id="privacy-modal-title" data-i18n="modal-privacy-title" class="font-display text-3xl font-bold text-md-onSurface"></h3>
-                    <p data-i18n="modal-scope-note" class="text-sm font-medium text-md-onSurfaceVariant mt-2"></p>
+                    <h3 id="privacy-modal-title" data-i18n="modal-privacy-title" class="font-display text-3xl font-bold text-md-onSurface">Uygulama Gizlilik Politikaları</h3>
+                    <p data-i18n="modal-scope-note" class="text-sm font-medium text-md-onSurfaceVariant mt-2">Bu metinler web sitesi için değil, Nevmara mobil uygulamaları için geçerlidir.</p>
                 </div>
                 <button id="close-privacy-btn" class="md-state-layer rounded-full p-2.5 bg-md-surfaceContainerHighest text-md-onSurface hover:text-md-primary hover:bg-md-primaryContainer transition-colors mt-1 sm:mt-0" aria-label="Kapat">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -405,7 +440,7 @@
                 <div id="privacy-content-area" class="prose prose-sm sm:prose-base dark:prose-invert max-w-none text-md-onSurfaceVariant font-medium prose-headings:font-display prose-headings:font-bold prose-headings:text-md-onSurface prose-a:text-md-primary prose-a:no-underline hover:prose-a:underline prose-p:leading-relaxed">
                     <div class="flex items-center gap-3 animate-pulse text-md-primary">
                         <div class="w-5 h-5 border-2 border-md-primary border-t-transparent rounded-full animate-spin"></div>
-                        <span data-i18n="modal-loading"></span>
+                        <span data-i18n="modal-loading">Belge sunucudan alınıyor...</span>
                     </div>
                 </div>
             </div>
@@ -414,17 +449,11 @@
 
     <!-- Uygulama Mantığı (Görsel ve Fonksiyonel İşlevler) -->
     <script>
-        // --- Gelişmiş Çeviri Sistemi ---
+        // --- Çeviri Sistemi ---
         const translations = {
             tr: {
+                "skip-content": "İçeriğe geç",
                 "hero-slogan": "Dijital dünyada anlamlı izler bırakıyoruz.",
-                "hero-title-1": "Dijital dünyada",
-                "hero-title-2": "anlamlı izler bırakıyoruz.",
-                "hero-desc": "Nevmara, insan odaklı, estetik ve işlevsel yazılımlar geliştiren bağımsız bir stüdyodur. Karmaşadan uzak, amaca hizmet eden dijital deneyimler tasarlıyoruz.",
-                "hero-cta-1": "Uygulamaları Keşfet",
-                "hero-cta-2": "Manifestomuzu Oku",
-                "nav-traces": "Projeler",
-                "nav-about": "Hakkımızda",
                 "projects-title": "Projelerimiz",
                 "vakitler-desc": "Namaz vakti uygulamamız, günlük ibadetlerinizi eksiksiz ve kolayca takip etmenize yardımcı olmak için kapsamlı özelliklerle donatılmıştır.",
                 "vakitler-cta": "Google Play'de İncele",
@@ -446,17 +475,14 @@
                 "footer-privacy": "Uygulama Gizlilik Politikaları",
                 "modal-privacy-title": "Uygulama Gizlilik Politikaları",
                 "modal-scope-note": "Bu metinler web sitesi için değil, Nevmara mobil uygulamaları için geçerlidir.",
-                "modal-loading": "Belge sunucudan alınıyor..."
+                "modal-loading": "Belge sunucudan alınıyor...",
+                "theme-toggle-label": "Temayı Değiştir",
+                "close-modal-label": "Kapat",
+                "lang-toggle-label": "İngilizceye geç"
             },
             en: {
+                "skip-content": "Skip to content",
                 "hero-slogan": "Leaving meaningful traces in the digital world.",
-                "hero-title-1": "Leaving meaningful",
-                "hero-title-2": "traces in the digital world.",
-                "hero-desc": "Nevmara is an independent studio developing human-centric, aesthetic, and functional software. We design digital experiences that serve a purpose, far from the chaos.",
-                "hero-cta-1": "Explore Apps",
-                "hero-cta-2": "Read Manifesto",
-                "nav-traces": "Projects",
-                "nav-about": "About Us",
                 "projects-title": "Our Projects",
                 "vakitler-desc": "Our prayer time app is packed with comprehensive features to help you keep track of your daily prayers easily and without missing a beat.",
                 "vakitler-cta": "View on Google Play",
@@ -478,26 +504,53 @@
                 "footer-privacy": "App Privacy Policies",
                 "modal-privacy-title": "App Privacy Policies",
                 "modal-scope-note": "These documents apply to Nevmara mobile applications, not this website.",
-                "modal-loading": "Fetching document from server..."
+                "modal-loading": "Fetching document from server...",
+                "theme-toggle-label": "Switch theme",
+                "close-modal-label": "Close",
+                "lang-toggle-label": "Türkçeye geç"
             }
         };
 
-        let currentLang = localStorage.getItem('lang') || 'tr';
+        function getInitialLanguage() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const langParam = (urlParams.get('lang') || '').toLowerCase();
+            if (langParam === 'tr' || langParam === 'en') {
+                return langParam;
+            }
+            const savedLang = localStorage.getItem('lang');
+            if (savedLang === 'tr' || savedLang === 'en') {
+                return savedLang;
+            }
+            if (navigator.language && !navigator.language.toLowerCase().startsWith('tr')) {
+                return 'en';
+            }
+            return 'tr';
+        }
+
+        let currentLang = getInitialLanguage();
 
         function updateLanguage(lang) {
             document.querySelectorAll('[data-i18n]').forEach(el => {
                 const key = el.getAttribute('data-i18n');
                 if (translations[lang] && translations[lang][key]) {
-                    // Span veya metin içeriyorsa bozmamak için sadece textContent değiştir
-                    if(el.children.length === 0) {
+                    if (el.children.length === 0) {
                         el.textContent = translations[lang][key];
                     } else {
-                        // Eğer içinde ok simgesi gibi öğeler varsa, baştaki metin düğümünü güncelle
                         el.childNodes[0].nodeValue = translations[lang][key] + " ";
                     }
                 }
             });
-            document.getElementById('lang-toggle').textContent = lang === 'tr' ? 'EN' : 'TR';
+
+            const langToggle = document.getElementById('lang-toggle');
+            langToggle.textContent = lang === 'tr' ? 'EN' : 'TR';
+            langToggle.setAttribute('aria-label', translations[lang]['lang-toggle-label']);
+
+            const themeToggle = document.getElementById('theme-toggle');
+            themeToggle.setAttribute('aria-label', translations[lang]['theme-toggle-label']);
+
+            const closeBtn = document.getElementById('close-privacy-btn');
+            closeBtn.setAttribute('aria-label', translations[lang]['close-modal-label']);
+
             document.documentElement.lang = lang;
             localStorage.setItem('lang', lang);
 
@@ -515,33 +568,46 @@
         // Başlangıç dilini ayarla
         updateLanguage(currentLang);
 
-        // --- Işık/Karanlık Tema Mantığı (MD3 Akıcı Geçiş) ---
+        // --- Tema Yönetimi ---
         const htmlEl = document.documentElement;
-        const themeToggleIcon = document.getElementById('theme-toggle').querySelector('svg');
+        const themeToggleBtn = document.getElementById('theme-toggle');
+        const themeToggleIcon = themeToggleBtn.querySelector('svg');
         
+        function updateThemeColor(isDark) {
+            const color = isDark ? '#141218' : '#FEF7FF';
+            let metaThemeColor = document.querySelector('meta[name="theme-color"]:not([media])');
+            if (!metaThemeColor) {
+                metaThemeColor = document.createElement('meta');
+                metaThemeColor.name = 'theme-color';
+                document.head.appendChild(metaThemeColor);
+            }
+            metaThemeColor.content = color;
+        }
+
         const updateThemeIcon = (isDark) => {
-            if(isDark) {
-                // Güneş ikonu (Daha yumuşak hatlı)
+            if (isDark) {
                 themeToggleIcon.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path>';
             } else {
-                // Ay ikonu
                 themeToggleIcon.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path>';
             }
         };
 
-        if (localStorage.getItem('theme') === 'dark' || (!localStorage.getItem('theme') && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        const initialIsDark = localStorage.getItem('theme') === 'dark' || (!localStorage.getItem('theme') && window.matchMedia('(prefers-color-scheme: dark)').matches);
+        if (initialIsDark) {
             htmlEl.classList.add('dark');
             updateThemeIcon(true);
+            updateThemeColor(true);
         }
 
-        document.getElementById('theme-toggle').addEventListener('click', () => {
+        themeToggleBtn.addEventListener('click', () => {
             htmlEl.classList.toggle('dark');
             const isDark = htmlEl.classList.contains('dark');
             localStorage.setItem('theme', isDark ? 'dark' : 'light');
             updateThemeIcon(isDark);
+            updateThemeColor(isDark);
         });
 
-        // --- MD3 2026 Uyumlu Gizlilik Modalı Mantığı ---
+        // --- Gizlilik Modalı Mantığı ---
         const modal = document.getElementById('privacy-modal');
         const panel = document.getElementById('modal-panel');
         const openBtn = document.getElementById('open-privacy');
@@ -562,8 +628,17 @@
                 
                 if (res.ok) {
                     const text = await res.text();
-                    // Markdown'ı parse et, MD3 tipografi sınıfları kapsayıcı (prose) tarafından yönetilir
-                    contentArea.innerHTML = marked.parse(text);
+                    if (typeof marked !== 'undefined') {
+                        // Bağlantıların yeni sekmede açılmasını sağla
+                        const renderer = new marked.Renderer();
+                        renderer.link = ({ href, title, text }) => {
+                            const titleAttr = title ? ` title="${title}"` : '';
+                            return `<a href="${href}"${titleAttr} target="_blank" rel="noopener noreferrer">${text}</a>`;
+                        };
+                        contentArea.innerHTML = marked.parse(text, { renderer });
+                    } else {
+                        contentArea.innerHTML = `<pre class="whitespace-pre-wrap font-sans text-sm">${text}</pre>`;
+                    }
                 } else {
                     contentArea.innerHTML = currentLang === 'tr' 
                         ? `<h3 class="text-xl font-bold">Gizlilik Politikası</h3><p>Şu anda bu dile ait gizlilik politikası dosyası bulunamadı. Lütfen daha sonra tekrar deneyin.</p>`
@@ -576,21 +651,24 @@
             }
         }
 
-        function toggleModal(show) {
-            if(show) {
+        function toggleModal(show, updateHistory = true) {
+            if (show) {
                 lastFocusedElement = document.activeElement;
                 modal.classList.remove('hidden');
                 modal.classList.add('flex');
-                document.body.style.overflow = 'hidden'; // Arka plan kaydırmayı engelle
+                document.body.style.overflow = 'hidden';
                 fetchPrivacy();
                 
-                // MD3 2026 Akıcı Giriş Animasyonları (Spring benzeri)
                 requestAnimationFrame(() => {
                     backdrop.classList.remove('opacity-0');
                     backdrop.classList.add('opacity-100');
                     panel.classList.remove('translate-y-full');
                     closeBtn.focus();
                 });
+
+                if (updateHistory && window.location.hash !== '#privacy') {
+                    history.pushState({ modalOpen: true }, '', '#privacy');
+                }
             } else {
                 panel.classList.add('translate-y-full');
                 backdrop.classList.remove('opacity-100');
@@ -603,7 +681,11 @@
                     if (lastFocusedElement && typeof lastFocusedElement.focus === 'function') {
                         lastFocusedElement.focus();
                     }
-                }, 500); // Animasyon süresi (md3 2026 timing)
+                }, 500);
+
+                if (updateHistory && window.location.hash === '#privacy') {
+                    history.replaceState(null, '', window.location.pathname + window.location.search);
+                }
             }
         }
 
@@ -611,7 +693,7 @@
         closeBtn.addEventListener('click', () => toggleModal(false));
         backdrop.addEventListener('click', () => toggleModal(false));
 
-        // URL'den kontrol
+        // URL kontrolü
         function shouldOpenPrivacyFromUrl() {
             const params = new URLSearchParams(window.location.search);
             const openParam = (params.get('open') || '').toLowerCase();
@@ -620,8 +702,18 @@
         }
 
         if (shouldOpenPrivacyFromUrl()) {
-            setTimeout(() => toggleModal(true), 800); // Sayfa yüklendikten sonra zarifçe açıl
+            setTimeout(() => toggleModal(true, false), 400);
         }
+
+        // Tarayıcı Geri/İleri tuşunu yakala (Popstate)
+        window.addEventListener('popstate', () => {
+            const isPrivacyHash = window.location.hash.toLowerCase() === '#privacy';
+            if (isPrivacyHash && modal.classList.contains('hidden')) {
+                toggleModal(true, false);
+            } else if (!isPrivacyHash && !modal.classList.contains('hidden')) {
+                toggleModal(false, false);
+            }
+        });
 
         // ESC tuşu ile kapatma
         document.addEventListener('keydown', (e) => {
@@ -630,7 +722,7 @@
             }
         });
 
-        // MD3 2026 Kaydırma İle Beliren Öğeler (Geliştirilmiş Intersection Observer)
+        // Intersection Observer (Görünürlük animasyonları)
         const observerOptions = {
             threshold: 0.15,
             rootMargin: '0px 0px -50px 0px'
@@ -650,10 +742,11 @@
             observer.observe(el);
         });
 
+        // Service Worker Kaydı
         if ('serviceWorker' in navigator) {
             window.addEventListener('load', () => {
                 navigator.serviceWorker.register('./sw.js').catch(() => {
-                    // Service worker isteğe bağlıdır; kayıt hatası kullanıcı akışını etkilemez.
+                    // Kayıt hatası kritik değildir.
                 });
             });
         }

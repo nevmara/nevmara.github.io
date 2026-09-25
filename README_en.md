@@ -15,22 +15,37 @@ This repository hosts the official web address that presents developer identity,
 ## Highlights
 
 - Static architecture with direct publishing from `index.html`
-- Turkish / English language switch
+- Turkish / English language switch (via UI or `?lang=en` URL parameter)
 - Light / Dark theme support
+- PWA & Offline support: Service Worker (`sw.js`) and `manifest.webmanifest`
 - Privacy content from `PRIVACY_tr.md` and `PRIVACY_en.md`
-- SEO setup: Open Graph, Twitter, JSON-LD schema, `sitemap.xml`, `robots.txt`
+- SEO setup: Open Graph, Twitter Cards, JSON-LD schema, `sitemap.xml`, `robots.txt`, `favicon.ico`
 
 ## Project Structure
 
 ```text
 .
+├─ .gitignore
+├─ 404.html
 ├─ index.html
+├─ favicon.ico
+├─ logo.svg
+├─ manifest.webmanifest
+├─ sw.js
 ├─ sitemap.xml
 ├─ robots.txt
 ├─ app-ads.txt
 ├─ google45810971e78d020d.html
+├─ package.json
+├─ package-lock.json
+├─ tailwind.config.cjs
 ├─ PRIVACY_tr.md
 ├─ PRIVACY_en.md
+├─ assets/
+│  ├─ css/
+│  │  └─ styles.css
+│  └─ js/
+│     └─ marked.min.js
 ├─ images/
 │  ├─ apple-touch-icon.png
 │  ├─ icon-192.png
@@ -40,7 +55,10 @@ This repository hosts the official web address that presents developer identity,
 │  ├─ falling.webp
 │  ├─ great.webp
 │  └─ sudoku.webp
-└─ logo.svg
+├─ scripts/
+│  └─ convert-images.mjs
+└─ src/
+   └─ input.css
 ```
 
 ## Run Locally
@@ -77,6 +95,7 @@ To open the page with the "App Privacy Policies" modal already visible, use one 
 
 - `https://nevmara.github.io/#privacy`
 - `https://nevmara.github.io/?open=privacy`
+- `https://nevmara.github.io/?lang=en#privacy` (Opens directly in English)
 
 ## Content Update Guide
 
@@ -88,7 +107,7 @@ To open the page with the "App Privacy Policies" modal already visible, use one 
 
 ## Developer Notes
 
-- Tailwind CSS is built locally during production; `marked` and `plausible` are loaded client-side.
+- Tailwind CSS is built locally during production; `marked.min.js` is bundled locally for offline PWA support.
 - Privacy modal fetches markdown file based on selected language.
 - Keep asset names in lowercase for consistency.
 

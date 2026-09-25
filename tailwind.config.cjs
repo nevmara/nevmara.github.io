@@ -45,16 +45,11 @@ module.exports = {
       },
       animation: {
         'spring-up': 'springUp 1s cubic-bezier(0.175, 0.885, 0.32, 1.1) forwards',
-        'fade-in': 'fadeIn 0.8s ease forwards',
       },
       keyframes: {
         springUp: {
           '0%': { opacity: 0, transform: 'translateY(40px)' },
           '100%': { opacity: 1, transform: 'translateY(0)' },
-        },
-        fadeIn: {
-          '0%': { opacity: 0 },
-          '100%': { opacity: 1 },
         },
       },
     },

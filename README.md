@@ -15,22 +15,37 @@ Bu repo; geliştirici kimliğini, üretilen uygulamaları ve iletişim kanallar�
 ## Öne Çıkanlar
 
 - Statik yapı: `index.html` üzerinden doğrudan yayın
-- Dil desteği: Türkçe / İngilizce içerik geçişi
+- Dil desteği: Türkçe / İngilizce içerik geçişi (`?lang=en` URL parametresi veya arayüzden)
 - Tema desteği: Light / Dark mode
+- PWA ve Çevrimdışı desteği: Service Worker (`sw.js`) ve `manifest.webmanifest`
 - Gizlilik metinleri: `PRIVACY_tr.md` ve `PRIVACY_en.md`
-- SEO altyapısı: Open Graph, Twitter, JSON-LD schema, `sitemap.xml`, `robots.txt`
+- SEO altyapısı: Open Graph, Twitter Cards, JSON-LD schema, `sitemap.xml`, `robots.txt`, `favicon.ico`
 
 ## Proje Yapısı
 
 ```text
 .
+├─ .gitignore
+├─ 404.html
 ├─ index.html
+├─ favicon.ico
+├─ logo.svg
+├─ manifest.webmanifest
+├─ sw.js
 ├─ sitemap.xml
 ├─ robots.txt
 ├─ app-ads.txt
 ├─ google45810971e78d020d.html
+├─ package.json
+├─ package-lock.json
+├─ tailwind.config.cjs
 ├─ PRIVACY_tr.md
 ├─ PRIVACY_en.md
+├─ assets/
+│  ├─ css/
+│  │  └─ styles.css
+│  └─ js/
+│     └─ marked.min.js
 ├─ images/
 │  ├─ apple-touch-icon.png
 │  ├─ icon-192.png
@@ -40,7 +55,10 @@ Bu repo; geliştirici kimliğini, üretilen uygulamaları ve iletişim kanallar�
 │  ├─ falling.webp
 │  ├─ great.webp
 │  └─ sudoku.webp
-└─ logo.svg
+├─ scripts/
+│  └─ convert-images.mjs
+└─ src/
+   └─ input.css
 ```
 
 ## Yerelde Çalıştırma
@@ -77,6 +95,7 @@ Sayfayı "Uygulama Gizlilik Politikaları" modalı açık başlayacak şekilde a
 
 - `https://nevmara.github.io/#privacy`
 - `https://nevmara.github.io/?open=privacy`
+- `https://nevmara.github.io/?lang=en#privacy` (İngilizce doğrudan açılış)
 
 ## İçerik Güncelleme Rehberi
 
@@ -88,7 +107,7 @@ Sayfayı "Uygulama Gizlilik Politikaları" modalı açık başlayacak şekilde a
 
 ## Geliştirici Notları
 
-- Tailwind CSS üretim sırasında derlenir; `marked` ve `plausible` istemci tarafında yüklenir.
+- Tailwind CSS üretim sırasında derlenir; `marked.min.js` çevrimdışı PWA desteği için yerel olarak barındırılır.
 - Gizlilik modalı dil seçimine göre ilgili markdown dosyasını istemci tarafında çeker.
 - Tüm dosya adları küçük harf standardında tutulmalıdır.
 
