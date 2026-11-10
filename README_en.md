@@ -50,6 +50,7 @@ This repository hosts the official web address that presents developer identity,
 │  ├─ apple-touch-icon.png
 │  ├─ icon-192.png
 │  ├─ icon-512.png
+│  ├─ og-image.jpg
 │  ├─ og-image.webp
 │  ├─ vakitler.webp
 │  ├─ falling.webp

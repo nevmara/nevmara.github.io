@@ -24,8 +24,11 @@
     <meta property="og:locale:alternate" content="en_US">
     <meta property="og:title" content="Nevmara Software">
     <meta property="og:description" content="Karmaşadan uzak, amaca hizmet eden dijital deneyimler.">
-    <meta property="og:image" content="https://nevmara.github.io/images/og-image.webp">
-    <meta property="og:image:type" content="image/webp">
+    <meta property="og:image" content="https://nevmara.github.io/images/og-image.jpg">
+    <meta property="og:image:secure_url" content="https://nevmara.github.io/images/og-image.jpg">
+    <meta property="og:image:type" content="image/jpeg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
     <meta property="og:image:alt" content="Nevmara Software">
 
     <!-- Twitter Card -->
@@ -34,7 +37,7 @@
     <meta name="twitter:creator" content="@nevmarasoftware">
     <meta name="twitter:title" content="Nevmara Software">
     <meta name="twitter:description" content="Karmaşadan uzak, amaca hizmet eden dijital deneyimler.">
-    <meta name="twitter:image" content="https://nevmara.github.io/images/og-image.webp">
+    <meta name="twitter:image" content="https://nevmara.github.io/images/og-image.jpg">
 
     <title>Nevmara Software</title>
     
@@ -240,6 +243,11 @@
             }
         </style>
     </noscript>
+    <script>
+        if (localStorage.getItem('theme') === 'dark' || (!localStorage.getItem('theme') && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.classList.add('dark');
+        }
+    </script>
 </head>
 <body class="antialiased selection:bg-md-primaryContainer selection:text-md-onPrimaryContainer relative">
 
@@ -366,7 +374,7 @@
         <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-start gap-12">
             <div class="max-w-xs">
                 <h4 class="font-display text-3xl font-bold text-md-primary mb-4 flex items-center gap-2">
-                    <img src="logo.svg" alt="Nevmara Logo" class="w-6 h-6 rounded-md">
+                    <img src="logo.svg" alt="Nevmara Logo" width="24" height="24" class="w-6 h-6 rounded-md">
                     NEVMARA
                 </h4>
                 <p data-i18n="footer-tagline" class="text-base text-md-onSurfaceVariant leading-relaxed font-medium">
@@ -592,9 +600,8 @@
             }
         };
 
-        const initialIsDark = localStorage.getItem('theme') === 'dark' || (!localStorage.getItem('theme') && window.matchMedia('(prefers-color-scheme: dark)').matches);
+        const initialIsDark = htmlEl.classList.contains('dark');
         if (initialIsDark) {
-            htmlEl.classList.add('dark');
             updateThemeIcon(true);
             updateThemeColor(true);
         }
@@ -715,10 +722,29 @@
             }
         });
 
-        // ESC tuşu ile kapatma
+        // ESC ve Tab tuşu kontrolü (Erişilebilirlik odak tuzağı)
         document.addEventListener('keydown', (e) => {
-            if (e.key === 'Escape' && !modal.classList.contains('hidden')) {
+            if (modal.classList.contains('hidden')) return;
+
+            if (e.key === 'Escape') {
                 toggleModal(false);
+                return;
+            }
+
+            if (e.key === 'Tab') {
+                const focusable = modal.querySelectorAll('button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])');
+                if (!focusable.length) return;
+
+                const first = focusable[0];
+                const last = focusable[focusable.length - 1];
+
+                if (e.shiftKey && document.activeElement === first) {
+                    e.preventDefault();
+                    last.focus();
+                } else if (!e.shiftKey && document.activeElement === last) {
+                    e.preventDefault();
+                    first.focus();
+                }
             }
         });
 

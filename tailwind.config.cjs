@@ -2,7 +2,7 @@ const typography = require('@tailwindcss/typography');
 
 module.exports = {
   darkMode: 'class',
-  content: ['./index.html'],
+  content: ['./index.html', './404.html'],
   theme: {
     extend: {
       fontFamily: {

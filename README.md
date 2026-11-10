@@ -50,6 +50,7 @@ Bu repo; geliştirici kimliğini, üretilen uygulamaları ve iletişim kanallar�
 │  ├─ apple-touch-icon.png
 │  ├─ icon-192.png
 │  ├─ icon-512.png
+│  ├─ og-image.jpg
 │  ├─ og-image.webp
 │  ├─ vakitler.webp
 │  ├─ falling.webp

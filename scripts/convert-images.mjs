@@ -8,9 +8,9 @@ const entries = await fs.readdir(imagesDir, { withFileTypes: true });
 
 const excludedFromWebp = new Set([
   'apple-touch-icon.png',
-  'logo.png',
   'icon-192.png',
-  'icon-512.png'
+  'icon-512.png',
+  'og-image.jpg'
 ]);
 
 const imageFiles = entries

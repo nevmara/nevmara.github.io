@@ -1,7 +1,8 @@
-const CACHE_NAME = 'nevmara-site-v2';
+const CACHE_NAME = 'nevmara-site-v3';
 const APP_SHELL = [
   './',
   './index.html',
+  './404.html',
   './manifest.webmanifest',
   './favicon.ico',
   './assets/css/styles.css',
@@ -14,6 +15,7 @@ const APP_SHELL = [
   './images/falling.webp',
   './images/great.webp',
   './images/sudoku.webp',
+  './images/og-image.jpg',
   './images/og-image.webp',
   './images/icon-192.png',
   './images/icon-512.png'
