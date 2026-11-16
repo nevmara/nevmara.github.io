@@ -53,6 +53,9 @@ This repository hosts the official web address that presents developer identity,
 │  ├─ og-image.jpg
 │  ├─ og-image.webp
 │  ├─ vakitler.webp
+│  ├─ kelamullah.webp
+│  ├─ hadis.webp
+│  ├─ epilepsi.webp
 │  ├─ falling.webp
 │  ├─ great.webp
 │  └─ sudoku.webp

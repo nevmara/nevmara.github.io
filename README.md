@@ -53,6 +53,9 @@ Bu repo; geliştirici kimliğini, üretilen uygulamaları ve iletişim kanallar�
 │  ├─ og-image.jpg
 │  ├─ og-image.webp
 │  ├─ vakitler.webp
+│  ├─ kelamullah.webp
+│  ├─ hadis.webp
+│  ├─ epilepsi.webp
 │  ├─ falling.webp
 │  ├─ great.webp
 │  └─ sudoku.webp
